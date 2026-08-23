@@ -1,0 +1,730 @@
+*{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	color: #fff;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+/* Webkit 浏览器 */
+*::-webkit-scrollbar {
+	display: none; /* 隐藏滚动条 */
+}
+
+
+html,body{
+	height: 100%;
+	width: 100%;
+}
+
+html {
+	background-color: rgb(5, 12, 27);	
+}
+
+body {
+	background: url("../img/10bg.png") no-repeat;
+	background-size: 100% 47%;
+}
+
+.flex-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-center-end{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.flex-end-center{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.flex-center-start{
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.hidden{
+	visibility:hidden !important;
+}
+
+.hide{
+	display:none !important;
+}
+
+.content{
+	width: 95%;
+	height: 95%;
+	left: 2.5%;
+	top: 2.5%;
+}
+
+.top{
+	width: 100%;
+	height: 16%;
+	justify-content: flex-start;
+}
+
+.middle{
+	margin-top: 1%;
+	margin-bottom: 0.5%;
+	width: 100%;
+	height: 65%;
+	overflow-x: scroll;
+	white-space: nowrap; /* 超出不换行 */
+	scroll-behavior: smooth; /* 平滑滚动 */
+	display: none;
+}
+
+.scene{
+	display: inline-block;
+	font-size: 0;
+}
+
+.bottom{
+	width: 100%;
+	height: 15%;
+	background: url("../img/Rectangle 28.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.pages {
+	position: fixed;
+	width: 95%;
+	height: 3%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	top: 77%;
+}
+
+.page {
+	width: 0.6vw;
+	height: 0.6vw;
+	border-radius: 0.3vw;
+	background-color: white;
+	margin-right: 0.3vw;
+}
+
+.page-active {
+	width: 1.6vw;
+	background-color: aquamarine;
+}
+
+.date-time{
+	width: 19%;
+}
+
+.time{
+	text-align: center;
+	font-size: 3.8vw;
+}
+
+.date{
+	font-size: 1.5vw;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.top-left{
+	width: 83.5%;
+	height: 100%;
+	justify-content: flex-start;
+}
+
+.top-left img{
+	height: 50%;
+	top: 5%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+/* 空气质量 */
+.air{
+	padding: 0.75% 1.25%;
+	width: 22%;
+	height: 86%;
+	background: url("../img/Rectangle 34625542.png") no-repeat;
+	background-size: 100% 100%;
+	margin-left: 0.5%;
+}
+
+.air-box{
+	width: 50%;
+	float: left;
+	margin-bottom: 5%;
+}
+
+.air-box img{
+	width: 25%;
+	margin-right: 8px;
+}
+
+.air-box-text-title{
+	font-size: 1.1vw;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.air-box-text-data{
+	font-size: 1.1vw;
+	color: rgba(255, 255, 255, 0.95);
+}
+
+.air-box-more{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+.air-box-more img{
+	width: 20%;
+	left: 20%;
+}
+
+.logo{
+	width: 52%;
+}
+
+.logo img{
+	width: 70%;
+	left: -4%;
+}
+
+/* 页面切换按钮 */
+.page-cut{
+	width: 18vw;
+	height: 4.5vw;
+	background: url("../img/Group 104.png") no-repeat;
+	background-size: 100% 100%;
+	display: none;
+	align-items: center;
+}
+
+.page-name{
+	font-size: 1.2vw;
+	margin-left: 27%;
+	width: 39%;
+	top: -1px;
+	display: -webkit-box; /* 设置为WebKit内核的弹性盒子模型 */
+	-webkit-box-orient: vertical; /* 垂直排列 */
+	-webkit-line-clamp: 2; /* 限制显示两行 */
+	overflow: hidden; /* 隐藏超出范围的内容 */
+	text-overflow: ellipsis; /* 使用省略号 */
+}
+
+.page-change{
+	font-size: 1.2vw;
+	width: 30%;
+	margin-left: 3%;
+	top: -1px;
+	color: rgba(255,255,255, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-change:active{
+	color: rgba(33,191,239,0.75);
+}
+
+/* 底部切换卡 */
+.switch-to-box{
+	width: 90%;
+	height: 100%;
+	left: 5%;
+}
+
+.switch-to{
+	width: 20%;
+	height: 85%;
+	border-radius: 1vw;
+	margin-left: 2%;
+	margin-right: 2%;
+	text-align: center;
+}
+
+.switch-to-active{
+	background-color: rgba(191,229,255, 0.25);
+}
+
+.switch-to img{
+	width: 3.5vw;
+	height: 3.5vw;
+	margin-bottom: 20%;
+}
+
+.switch-to-display{
+	font-size: 0;
+}
+
+.switch-to .dg{
+	margin-top: 10%;
+	width: 3vw;
+	height: 2.8vw;
+	margin-bottom: 40%;
+}
+
+.switch-to .kt{
+	margin-top: 20%;
+	height: auto;
+	margin-bottom: 55%;
+}
+
+
+.switch-to span{
+	font-size: 1.4vw;
+}
+
+/* 中间内容 */
+.module-box{
+	width: 23.5%;
+	height: 86%;
+	margin-right: 2%;
+	top: 5%;
+	background: url("../img/box2.png") no-repeat;
+	background-size: 100% 100%;
+	display: inline-flex;
+}
+
+.module-box-special{
+	width: 22.6%;
+	height: 86%;
+	margin-right: 1.8%;
+	top: 5%;
+	background: url("../img/box2.png") no-repeat;
+	background-size: 100% 100%;
+	display: inline-flex;
+}
+
+.module-box-half{
+	width: 13%;
+	height: 86%;
+	margin-right: 1.8%;
+	top: 5%;
+	background: url("../img/box2.png") no-repeat;
+	background-size: 100% 100%;
+	display: inline-flex;
+}
+
+.module-mode,.module-control{
+	width: 100%;
+	position: absolute;
+}
+
+.module-control{
+	height: 100%;
+}
+
+.module-box-end{
+	margin-right: 0%;
+}
+
+.mode{
+	width: 84%;
+	left: 7%;
+	height: 5.2vw;
+	margin-top: 12.5%;
+	margin-bottom: 12.5%;
+	border-radius: 0.8vw;
+}
+
+.mode img{
+	width: 20%;
+}
+
+.mode span{
+	font-size: 1.6vw;
+	margin-left: 5px;
+}
+
+/* 灯光 空调 */
+.module-box-title{
+	font-size: 1.6vw;
+	margin-top: 1.2vw;
+	margin-left: 1.6vw;
+}
+
+.module-box-icon{
+	width: 100%;
+	height: 73%;
+}
+
+.module-box-icon2{
+	height: 40%;
+}
+
+.module-box-icon3{
+	height: 52.7%;
+}
+
+.module-box-icon img{
+	width: 48%;
+}
+
+.module-box-adjust{
+	width: 84%;
+	left: 8%;
+	height: 4vw;
+}
+
+.module-box-adjust-change{
+	width: 60%;
+	height: 4vw;
+	background-color: rgba(255,255,255, 0.07);
+	border-radius: 0.5vw;
+}
+
+.module-box-adjust svg{
+	width: 20%;
+	height: auto;
+}
+
+.module-box-adjust-change span{
+	font-size: 1.6vw;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.module-box-adjust-switch{
+	width: 40%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.module-box-adjust-switch img{
+	width: 66%;
+}
+
+
+	
+.curtain_icon{
+	width: 12.5% !important;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.color,.brigh{
+	font-size: 0;
+	text-align: center;
+	margin-top: 14%;
+}
+
+.module-sliders span{
+	font-size: 1.35vw;
+	display: inline-block;
+	margin-bottom: 5%;
+}
+
+.hvac-change{
+	width: 84%;
+	height: 10%;
+	left: 8%;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	background-color: rgba(103, 119, 138, 0.87);
+	/* margin-left: 5%; */
+	font-size: 1.4vw;
+	border-radius: 0.8vw;
+	margin-bottom: 10%;
+}
+
+.hvac-change:active{
+	background-color: rgba(103, 119, 138, 0.8);
+}
+
+.hvac-change img {
+	width: 24%;
+	padding: 0% 5%;
+}
+
+@keyframes pop {
+	from {
+		top: 100%;
+	}
+	to {
+		top: 4%;
+	}
+}
+
+.pop{
+	width: 96%;
+	height: 92%;
+	position: absolute;
+	left: 2%;
+	top: 4%;
+	background: rgba(103,119,138,0.87);
+	border-radius: 1vw;
+	animation: pop 0.5s;
+	display: none;
+	overflow-y: scroll;
+}
+
+.close{
+	margin-top: 2%;
+	width: 95%;
+	/* height: 10%; */
+	display: flex;
+	align-items: center;
+	left: 2%;
+}
+.close span{
+	width: 100%;
+	text-align: center;
+	font-size: 2vw;
+}
+
+.close img {
+	height: 3vw;
+}
+
+.close img:active{
+	height: 3.2vw;
+}
+
+.pop-cont {
+	width: 84%;
+	left: 8%;
+	height: 80%;
+	top: 5%;
+	flex-wrap: wrap;
+	overflow-y: scroll;
+	display: flex;
+	justify-content: space-between;
+}
+
+.pop-cont-box{
+	width: 16vw;
+	height: 16vw;
+	background: url("../img/box3.png") no-repeat;
+	background-size: 100% 100%;
+	margin-left: 2.2%;
+	margin-right: 2.2%;
+}
+
+
+.pop-cont-box span{
+	height: 20%;
+	font-size: 1.5vw;
+	display: flex;
+	align-items: flex-end;
+	margin-left: 1.4vw;
+}
+
+.pop-cont-box-icon{
+	height: 50%;
+}
+
+.pop-cont-box-icon img{
+	width: 32%;
+}
+
+.pop-cont-box-switch{
+	width: 92%;
+	height: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.pop-cont-box-switch img{
+	width: 32%;
+	height: 50%;
+}
+
+.module-control-half{
+	width: 86%;
+	margin-top: 20%;
+	margin-left: 7%;
+	padding: 5% 0%;
+}
+
+.module-control-half:active{
+	background-color: rgba(103, 119, 138, 0.8);
+	border-radius: 0.5vw;
+}
+
+.module-control-half img{
+	width: 45%;
+}
+
+.module-control-half span{
+	width: 100%;
+	height: 3vw;
+	color: #fff;
+	font-size: 1.5vw;
+}
+
+
+@keyframes spop {
+	from {
+		top: 100%;
+	}
+	to {
+		top: 32.5%;
+	}
+}
+
+.service-pop,.meeting-pop{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	display: none;
+}
+
+.pop-form{
+	width: 60%;
+	height: 35%;
+	left: 20%;
+	top: 32.5%;
+	/* background: rgba(103,119,138,0.87); */
+	background: url("../img/Rectangle 144x10.png") no-repeat;
+	background-size: 100% 100%;
+	border-radius: 1vw;
+	animation: spop 0.5s;
+	overflow-y: scroll;
+}
+
+.services,.meetings{
+	width: 100%;
+}
+
+.service,.meeting{
+	width: 29.33%;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 0;
+	padding-top: 1.5%;
+	padding-bottom: 2%;
+}
+
+.service:active,.meeting:active{
+	background-color: rgba(103, 119, 138, 0.8);
+	border-radius: 1vw;
+}
+
+.service img,.meeting img{
+	width: 50%;
+	left: 25%;
+}
+
+.service span,.meeting span{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-size: 2vw;
+}
+
+@keyframes poptip {
+	from {
+		top: 100%;
+	}
+	to {
+		top: 36%;
+	}
+}
+/* 弹出提示框 */
+.tip-box{
+	width: 32%;
+	height: 32%;
+	left: 34%;
+	top: 34%;
+	background: url("../img/Rectangle 144x10.png") no-repeat;
+	background-size: 100% 100%;
+	border-radius: 1vw;
+	animation: poptip 0.5s;
+	position: absolute;
+	z-index: 999;
+	zoom: 1.1;
+}
+
+.tip-box span{
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	font-size: 1.9vw;
+	margin-top: 10%;
+	margin-bottom: 8%;
+}
+
+.tip-box p{
+	font-size: 1.4vw;
+	text-align: center;
+}
+
+.tip-close{
+	width: 100%;
+	margin-top: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tip-close img {
+	height: 2.8vw;
+}
+
+.tip-close img:active{
+	height: 3vw;
+}
+
+.floor-init,.floor-cw1,.floor-cw2,.floor-mode1,.floor-mode2{
+	width: 100px;
+	height: 40px;
+	background-color: rgba(0,0,0, 0.2);
+}
+
+.floor-init:active,.floor-cw1:active,.floor-cw2:active,.floor-mode1:active,.floor-mode2:active{
+	width: 100px;
+	height: 40px;
+	background-color: rgba(0,0,0, 0.3);
+}
+
+
+#meetingRooms,#park{
+	left: 10%;
+	width: 80%;
+	height: 5vw;
+	color: #555;
+	font-size: 2vw;
+	padding-left: 10px;
+	border-radius: 5px;
+	top: -5%;
+}
+
+#park{
+	top: 15%;
+}
+
+#meetingRooms option,#park option{
+	color: #555;
+}
+
+#bingMeetingRoom{
+	background-color: #5F9EA0;
+	width: 50%;
+	height: 5vw;
+	font-size: 2vw;
+	left: 25%;
+	border-radius: 1vw;
+	top: -15%;
+}
+
+#bingMeetingRoom:active{
+	background-color: #5F8EA0;
+}

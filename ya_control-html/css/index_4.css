@@ -1,0 +1,683 @@
+:root {
+	--zoom: 1;
+	--h: 1;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	color: #fff;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+/* Webkit 浏览器 */
+*::-webkit-scrollbar {
+	display: none; /* 隐藏滚动条 */
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+}
+
+html{
+	background-color: rgb(21, 30, 57);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body {
+	background: url("../img/4bg.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.flex-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-center-end{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.hidden{
+	visibility:hidden !important;
+}
+
+.hide{
+	display:none !important;
+}
+
+.dashed{
+	width: 60%;
+	height: 1px;
+	border-top: 1px dashed rgb(120, 120, 120);
+	left: 20%;
+}
+
+.content{
+	width: calc(100% - calc(52px * var(--h)));
+	height: calc(100% - calc(60px * var(--h)));
+	left: calc(26px * var(--h));
+	top: calc(30px * var(--h));
+}
+
+.top{
+	width: 100%;
+	height: 16%;
+	justify-content: left;
+}
+
+.middle{
+	margin-top: 2%;
+	margin-bottom: 0.5%;
+	width: 100%;
+	/* left: 5px; */
+	height: 83%;
+	overflow-x: scroll;
+	white-space: nowrap; /* 超出不换行 */
+	scroll-behavior: smooth; /* 平滑滚动 */
+	display: none;
+}
+
+.scene{
+	display: inline-block;
+}
+
+.bottom{
+	width: 100%;
+	height: 14%;
+	background: url("../img/Rectangle 28.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.pages {
+	position: fixed;
+	left: 0%;
+	width: 99.5%;
+	height: 3%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	top: 92%;
+}
+
+.page {
+	width: calc(1.4vw * var(--zoom));
+	height: calc(1.4vw * var(--zoom));
+	border-radius: 0.7vw;
+	background-color: white;
+	margin-right: 0.125rem;
+}
+
+.page-active {
+	width: calc(3.4vw * var(--zoom));
+	background-color: aquamarine;
+}
+
+.date-time{
+	width: 35%;
+	margin-right: 2%;
+}
+
+.time{
+	text-align: center;
+	font-size: calc(9vw * var(--zoom));
+}
+
+.date{
+	font-size: calc(3.5vw * var(--zoom));
+	text-align: center;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.top-left{
+	width: 100%;
+	height: 100%;
+	justify-content: left;
+}
+
+.top-left img{
+	height: 50%;
+	top: 5%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+/* 空气质量 */
+.air{
+	padding: 4px;
+	width: 70%;
+	height: 100%;
+	background: url("../img/Rectangle 34625542.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.air-box{
+	width: 50%;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.air-box img{
+	width: 17%;
+	margin-right: 8px;
+}
+
+.air-box-text-title{
+	color: rgba(255, 255, 255, 0.5);
+	font-size: calc(2vw * var(--zoom));
+}
+
+.air-box-text-data{
+	font-size: calc(2vw * var(--zoom));
+	color: rgba(255, 255, 255, 0.95);
+}
+
+.air-box-more{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+.air-box-more img{
+	width: 12%;
+	left: 16%;
+}
+
+.logo{
+	width: 60%;
+}
+
+.logo img{
+	width: 100%;
+	left: -4%;
+}
+
+/* 底部切换卡 */
+.switch-to-box{
+	width: 90%;
+	height: 100%;
+	left: 5%;
+}
+
+.switch-to{
+	width: 20%;
+	height: 85%;
+	border-radius: 10px;
+	margin-left: 2%;
+	margin-right: 2%;
+	text-align: center;
+}
+
+.switch-to-active{
+	background-color: rgba(191,229,255, 0.25);
+}
+
+.switch-to img{
+	width: 3.5vw;
+}
+
+.switch-to .dg{
+	width: 3vw;
+	height: 2.8vw;
+	margin-bottom: 5px;
+}
+
+.switch-to .kt{
+	margin-top: 8px;
+	margin-bottom: 15px;
+}
+
+.switch-to span{
+	font-size: calc(1.2vw * var(--zoom));
+}
+
+.back{
+	left: calc(100% - calc(8vw * var(--zoom)));
+	position: absolute;
+	width: calc(6vw * var(--zoom));
+	height: calc(6vw * var(--zoom));
+	background: url("../img/close.png") no-repeat;
+	background-size: 100% 100%;
+	display: none;
+}
+
+.back:active{
+	background: url("../img/close-on.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+
+/* 中间内容 */
+.module-box{
+	width: 47%;
+	height: 88%;
+	margin-right: 4.7%;
+	top: 5%;
+	background: url("../img/box2.png") no-repeat;
+	background-size: 100% 100%;
+	display: inline-flex;
+}
+
+.module-box-end{
+	margin-right: 0%;
+}
+
+.module-mode,.module-control{
+	width: 100%;
+	position: absolute;
+}
+
+.module-control{
+	height: 100%;
+}
+
+.mode{
+	width: calc(100% - 40px);
+	/* height: 45px; */
+	height: calc(10vw * var(--zoom));
+	left: 15px;
+	padding: 5px;
+	margin-top: 6vw;
+	margin-bottom: 6vw;
+	border-radius: 8px;
+}
+
+.mode-noMeet{
+	height: calc(10vw * var(--zoom));
+	/* height: 50px; */
+	margin-top: 6vw;
+	margin-bottom: 6vw;
+	/* margin-top: 20px; */
+	/* margin-bottom: 30px; */
+}
+
+.mode:active{
+	background-color: rgba(191, 229, 255, 0.25);
+}
+
+.mode img{
+	width: 26%;
+}
+
+.mode span{
+	font-size: calc(3.5vw * var(--zoom));
+	margin-left: 10px;
+}
+
+/* 灯光 空调 */
+.module-box-title{
+	font-size: calc(3.5vw * var(--zoom));
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 5px;
+	height: calc(5.5vw * var(--zoom));
+}
+
+.module-box-title span{
+	float: right;
+	padding: 5px 10px;
+	margin-top: -5px;
+}
+
+.module-box-title span:active{
+	color: 	rgb(135,206,250);
+}
+
+.module-box-icon{
+	width: 100%;
+	height: calc(100% - 10px - calc(19.5vw * var(--zoom)));
+	/* height: 65%; */
+}
+
+.module-box-icon2{
+	height: calc(100% - 10px - calc(30.5vw * var(--zoom)));
+	/* height: 50%; */
+}
+
+.module-box-icon3{
+	/* height: calc(100% - 165px); */
+	height: calc(100% - 10px - calc(27.5vw * var(--zoom)));
+}
+
+.module-box-icon img{
+	width: 44%;
+}
+
+.module-box-adjust{
+	width: calc(100% - calc(5vw * var(--zoom)));
+	margin-top: 5%;
+	left: calc(2.5vw * var(--zoom));
+}
+
+.module-box-adjust-change{
+	width: 80%;
+	/* height: 42px; */
+	background-color: rgba(255,255,255, 0.07);
+	border-radius: 10px;
+}
+
+.module-box-adjust svg{
+	width: 24%;
+	height: 100%;
+	margin: 3%;
+}
+
+.module-box-adjust-change span{
+	font-size: calc(3.6vw * var(--zoom));
+	width: calc(100% - 75px);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.module-box-adjust-switch{
+	width: 30%;
+	/* height: 42px; */
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.module-box-adjust-switch img{
+	width: 90%;
+	/* height: 67%; */
+}
+	
+.curtain_icon{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.color,.brigh{
+	text-align: center;
+	margin-bottom: 5%;
+/* 	top: 10px; */
+}
+
+.module-sliders{
+	margin-top: -10%;
+}
+
+.module-sliders span{
+	font-size: calc(3.5vw * var(--zoom));
+	/* margin-bottom: 10px; */
+	/* top: 5px; */
+	display: inline-block;
+}
+
+.hvac-change{
+	width: calc(100% - calc(5vw * var(--zoom)));
+	height: calc(5vw * var(--zoom));
+	left: calc(2.5vw * var(--zoom));
+	padding-top: 3.5%;
+	padding-bottom: 3.5%;
+	background-color: rgba(103, 119, 138, 0.87);
+	/* margin-left: 5%; */
+	font-size: calc(3.2vw * var(--zoom));
+	border-radius: 6px;
+}
+
+.hvac-change:active{
+	background-color: rgba(103, 119, 138, 0.8);
+}
+
+.hvac-change img {
+	width: 30%;
+	padding: 0% 3%;
+}
+
+.module-box-icon2 ~ .module-box-adjust{
+	/* margin-top: 35px; */
+}
+
+@keyframes pop {
+	from {
+		top: 100%;
+	}
+	to {
+		top: 5%;
+	}
+}
+
+.pop{
+	width: 90%;
+	height: 90%;
+	position: absolute;
+	left: 5%;
+	top: 5%;
+	/* background: rgba(103,119,138,0.92); */
+	border-radius: 1vw;
+	animation: pop 0.5s;
+	display: none;
+	overflow-y: scroll;
+	background: url("../img/Rectangle 144.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.close{
+	width: 95%;
+	height: 13%;
+	display: flex;
+	align-items: center;
+	left: 2%;
+}
+.close span{
+	width: 100%;
+	text-align: center;
+	font-size: calc(4vw * var(--zoom));
+}
+
+.close img {
+	height: 60%;
+}
+
+.close img:active{
+	height: 50%;
+}
+
+.pop-cont {
+	width: 92%;
+	left: 4%;
+	height: 77%;
+	top: 2%;
+	flex-wrap: wrap;
+	overflow-y: scroll;
+	display: flex;
+	justify-content: space-between;
+}
+
+.pop-cont-box{
+	width: 18vw;
+	height: 20vw;
+	background: url("../img/box3.png") no-repeat;
+	background-size: 100% 100%;
+	margin-left: 1.2%;
+	margin-right: 1.2%;
+	margin-top: 8%;
+}
+
+.pop-cont-box span{
+	display: flex;
+	width: 92%;
+	left: 8%;
+	/* height: 50px; */
+	font-size: calc(3.5vw * var(--zoom));
+	margin-top: 4px;
+	
+}
+
+.pop-cont-box-icon{
+	height: 47%;
+}
+
+.pop-cont-box-icon img{
+	width: 36%;
+}
+
+.pop-cont-box-switch{
+	width: 95%;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-top: -5px;
+}
+
+.pop-cont-box-switch img{
+	width: 32%;
+	height: 60%;
+}
+
+.call-box{
+	margin: 2.5% 6.5%;
+	width: calc(30vw * var(--zoom));
+	height: calc(30vw * var(--zoom));
+	text-align: center;
+}
+
+.call-box:active{
+	background-color: rgba(191,229,255, 0.25);
+	border-radius: 10px;
+}
+
+.call-box img{
+	width: 60%;
+}
+
+.call-box span{
+	font-size: calc(4vw * var(--zoom));
+}
+
+
+@keyframes poptip {
+	from {
+		top: 100%;
+	}
+	to {
+		top: 30%;
+	}
+}
+/* 弹出提示框 */
+.tip-box{
+	width: 64%;
+	height: 40%;
+	left: 18%;
+	top: 30%;
+	background: url("../img/Rectangle 144x10.png") no-repeat;
+	background-size: 100% 100%;
+	border-radius: 1vw;
+	animation: poptip 0.5s;
+	position: absolute;
+	z-index: 999;
+}
+
+.tip-box span{
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	font-size: calc(4vw * var(--zoom));
+	margin-top: 10%;
+	margin-bottom: 8%;
+}
+
+.tip-box p{
+	text-align: center;
+	font-size: calc(3.5vw * var(--zoom));
+}
+
+.tip-close{
+	width: 100%;
+	margin-top: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tip-close img {
+	height: 6vw;
+}
+
+.tip-close img:active{
+	height: 6.2vw;
+}
+
+#meetingRooms,#park{
+	left: 10%;
+	width: 80%;
+	height: 9vw;
+	color: #555;
+	font-size: calc(4vw * var(--zoom));
+	padding-left: 10px;
+	border-radius: 5px;
+	top: -5%;
+}
+
+#park{
+	top: 15%;
+}
+
+#meetingRooms option,#park option{
+	color: #555;
+}
+
+#bingMeetingRoom{
+	background-color: #5F9EA0;
+	width: 50%;
+	height: 9vw;
+	font-size: calc(4vw * var(--zoom));
+	left: 25%;
+	border-radius: 1vw;
+	top: -15%;
+}
+
+#bingMeetingRoom:active{
+	background-color: #5F8EA0;
+}
+
+/* 页面切换按钮 */
+.page-cut{
+	position: fixed;
+	left: calc(84% - 20px);
+	top: 5%;
+	width: 16%;
+	height: 7%;
+	background: url("../img/Group 104.png") no-repeat;
+	background-size: 100% 100%;
+	display: none;
+	align-items: center;
+}
+
+.page-name{
+	font-size: 1.2vw;
+	margin-left: 27%;
+	width: 40%;
+	top: -1px;
+}
+
+.page-change{
+	width: 29%;
+	font-size: 1.2vw;
+	margin-left: 3%;
+	top: -1px;
+	color: rgba(255,255,255, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-change:active{
+	color: rgba(33,191,239,0.75);
+}

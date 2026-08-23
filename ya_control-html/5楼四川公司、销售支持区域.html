@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>5楼区域1</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/date.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/alert.css">
+    <script type="text/javascript" src="js/alert.js"></script>
+    <script type="text/javascript" src="js/RangeSlider.js"></script>
+    <link href="css/index_1280x800.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/slider_10.css" type="text/css"/>
+	<script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        document.write('<script type="text/javascript" src="js/utils.js?t=' + new Date().getTime() + '"><\/script>');
+    </script>
+	
+    <style>	
+		/* 互锁模式 */
+		.inter-lock-active-mode1 {
+			background-color: rgba(191,229,255, 0.25);
+		}
+		
+    </style>
+</head>
+<body>
+	<div class="content">		
+		<!-- 顶部 时间 logo -->
+		<div class="top flex-center">
+			<div class="top-left flex-center">
+				<div class="date-time">
+					<div class="time">09:00</div>
+					<div class="date">2024/07/23 周二</div>
+				</div>
+				<img src="img/Rectangle 137.png"/>
+				<div class="air hide">
+					<div class="air-box flex-center">
+						<img src="img/湿度@3x.png"/>
+						<div class="air-box-text">
+							<div class="air-box-text-title">室内湿度</div>
+							<div class="air-box-text-data">45%</div>
+						</div>
+					</div>
+					<div class="air-box flex-center">
+						<img src="img/湿度@3x.png"/>
+						<div class="air-box-text">
+							<div class="air-box-text-title">室内湿度</div>
+							<div class="air-box-text-data">45%</div>
+						</div>
+					</div>
+					<div class="air-box flex-center">
+						<img src="img/湿度@3x.png"/>
+						<div class="air-box-text">
+							<div class="air-box-text-title">室内湿度</div>
+							<div class="air-box-text-data">45%</div>
+						</div>
+					</div>
+					
+					<div class="air-box-more">
+						<img src="img/Group 1912059994.png"/>
+					</div>
+				</div>
+				<div class="logo">
+					<img src="img/logo.png"/>
+				</div>
+			</div>
+			<div class="page-cut hide">
+				<div class="page-name">茶室</div>
+				<div class="page-change">切换</div>
+			</div>
+		</div>
+		<!-- 中间 控制区 -->
+		<div class="middle scene">
+			<!-- <div class="module-box flex-center">
+				<div class="module-mode">
+					<div class="mode flex-center" inter-lock="mode1" control="955110" childon="151968">
+						<img src="img/日常.png"/>
+						<span>办公模式</span>
+					</div> -->
+					<!-- <div class="mode flex-center" inter-lock="mode1" control="955111" childon="151968" childoff="4556046">
+						<img src="img/meet.png"/>
+						<span>夜间模式</span>
+					</div> -->
+					<!-- <div class="mode flex-center" inter-lock="mode1" control="955112" childoff="151968,4556046">
+						<img src="img/out.png"/>
+						<span>离开模式</span>
+					</div>
+				</div>
+			</div> -->
+			<div class="module-box">
+				<div isAll control="151968" child="151301-151309,151312,255067,255072-255074,255083-255087,255096" class="module-control" self-lock>
+					<div class="module-box-title">区域灯光</div>
+					<div class="module-box-icon flex-center">
+						<img src="img/灯.png"/>
+					</div>
+					<div class="module-box-adjust flex-center">
+						<div class="module-box-adjust-change flex-center">
+							<svg t="1768361448809" class="icon b_effect down" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9162" width="72" height="72"><path d="M161.1 511.2l373.6-373.6c26.4-26.4 61-39.5 95.6-39.5 34.6 0 69.2 13.2 95.6 39.5 52.7 52.7 52.7 138.5 0 191.2L400.4 654.3c-10.3 10.3-27 10.3-37.3 0-10.3-10.3-10.3-27 0-37.3l325.4-325.4c32.2-32.2 32.2-84.5 0-116.6-32.2-32.2-84.5-32.2-116.6 0L198.4 548.5M630.3 98.1" fill="#2197EF" p-id="9163"></path><path d="M371 375.9l341.2 341.2c42.5 42.5 42.5 111.4 0 153.9s-111.4 42.5-153.9 0L217 529.9" fill="#CEE8FA" p-id="9164"></path><path d="M198.4 548.5l336.3 336.3c25.5 25.5 59.5 39.6 95.6 39.6 36.1 0 70.1-14.1 95.6-39.6 52.7-52.7 52.7-138.5 0-191.2L389.6 357.3m-74.6 0l17.4 17.4 19.8 19.8 336.3 336.3c32.2 32.2 32.2 84.5 0 116.6-15.6 15.6-36.3 24.2-58.3 24.2s-42.7-8.6-58.3-24.2L235.7 511.2l-20.5-20.5-16.7-16.7" fill="#2197EF" p-id="9165"></path></svg>
+							<span>70%</span>
+							<svg t="1768361427880" class="icon b_effect up" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8174" width="72" height="72"><path d="M836.8 551.2L462 176.4c-32.3-32.3-84.8-32.3-117 0-32.3 32.3-32.3 84.8 0 117L671.5 620c10.3 10.3 10.3 27.1 0 37.4-10.3 10.3-27.1 10.3-37.4 0L307.6 330.8c-52.9-52.9-52.9-139 0-191.8 26.4-26.4 61.2-39.7 95.9-39.7s69.5 13.2 95.9 39.7l374.8 374.8M403.5 99.3" fill="#2197EF" p-id="8175"></path><path d="M818.1 532.5L475.8 874.9c-42.6 42.6-111.8 42.6-154.4 0-42.7-42.6-42.7-111.8 0-154.4l342.4-342.4" fill="#CEE8FA" p-id="8176"></path><path d="M645 359.4L307.6 696.8c-52.9 52.9-52.9 139 0 191.8 25.6 25.6 59.7 39.7 95.9 39.7s70.3-14.1 95.9-39.7l337.4-337.4m0-74.8L820 493.2l-20.6 20.6L462 851.2c-15.6 15.6-36.4 24.2-58.5 24.2s-42.9-8.6-58.5-24.2c-32.3-32.3-32.3-84.8 0-117l337.4-337.4 19.9-19.9 17.5-17.5" fill="#2197EF" p-id="8177"></path></svg>
+						</div>
+						<div class="module-box-adjust-switch">
+							<img src="img/Switch-off.png"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 集合 > 6开关 7模式 8风速 9温度 -->
+			<div class="module-box">
+				<div control="4556046" child="4550046-4550055,4550017,4550019" class="module-control" self-lock>
+					<div class="module-box-title">区域空调</div>
+					<div class="module-box-icon flex-center module-box-icon3">
+						<img src="img/空调.png"/>
+					</div>
+					<div class="flex-center hvac-change" pop="hvac-all-change-pop">
+						<div class="hvac-mode flex-center">
+							<img src="img/制冷.png"/>
+							<span>制冷</span>
+						</div>
+						<img style="height: 80%;width: 1px" src="img/竖.png"/>
+						<div class="hvac-speed flex-center">
+							<img src="img/小风.png"/>
+							<span>低速</span>
+						</div>
+					</div>
+					<div class="module-box-adjust flex-center">
+						<div class="module-box-adjust-change flex-center">
+							<svg t="1768361448809" class="icon b_effect down" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9162" width="72" height="72"><path d="M161.1 511.2l373.6-373.6c26.4-26.4 61-39.5 95.6-39.5 34.6 0 69.2 13.2 95.6 39.5 52.7 52.7 52.7 138.5 0 191.2L400.4 654.3c-10.3 10.3-27 10.3-37.3 0-10.3-10.3-10.3-27 0-37.3l325.4-325.4c32.2-32.2 32.2-84.5 0-116.6-32.2-32.2-84.5-32.2-116.6 0L198.4 548.5M630.3 98.1" fill="#2197EF" p-id="9163"></path><path d="M371 375.9l341.2 341.2c42.5 42.5 42.5 111.4 0 153.9s-111.4 42.5-153.9 0L217 529.9" fill="#CEE8FA" p-id="9164"></path><path d="M198.4 548.5l336.3 336.3c25.5 25.5 59.5 39.6 95.6 39.6 36.1 0 70.1-14.1 95.6-39.6 52.7-52.7 52.7-138.5 0-191.2L389.6 357.3m-74.6 0l17.4 17.4 19.8 19.8 336.3 336.3c32.2 32.2 32.2 84.5 0 116.6-15.6 15.6-36.3 24.2-58.3 24.2s-42.7-8.6-58.3-24.2L235.7 511.2l-20.5-20.5-16.7-16.7" fill="#2197EF" p-id="9165"></path></svg>
+							<span control="4559046">22℃</span>
+							<svg t="1768361427880" class="icon b_effect up" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8174" width="72" height="72"><path d="M836.8 551.2L462 176.4c-32.3-32.3-84.8-32.3-117 0-32.3 32.3-32.3 84.8 0 117L671.5 620c10.3 10.3 10.3 27.1 0 37.4-10.3 10.3-27.1 10.3-37.4 0L307.6 330.8c-52.9-52.9-52.9-139 0-191.8 26.4-26.4 61.2-39.7 95.9-39.7s69.5 13.2 95.9 39.7l374.8 374.8M403.5 99.3" fill="#2197EF" p-id="8175"></path><path d="M818.1 532.5L475.8 874.9c-42.6 42.6-111.8 42.6-154.4 0-42.7-42.6-42.7-111.8 0-154.4l342.4-342.4" fill="#CEE8FA" p-id="8176"></path><path d="M645 359.4L307.6 696.8c-52.9 52.9-52.9 139 0 191.8 25.6 25.6 59.7 39.7 95.9 39.7s70.3-14.1 95.9-39.7l337.4-337.4m0-74.8L820 493.2l-20.6 20.6L462 851.2c-15.6 15.6-36.4 24.2-58.5 24.2s-42.9-8.6-58.5-24.2c-32.3-32.3-32.3-84.8 0-117l337.4-337.4 19.9-19.9 17.5-17.5" fill="#2197EF" p-id="8177"></path></svg>
+						</div>
+						<div class="module-box-adjust-switch">
+							<img src="img/Switch-off.png"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="module-box">
+				<div control="5556018" child="5550018" class="module-control" self-lock>
+					<div class="module-box-title">区域新风</div>
+					<div class="module-box-icon flex-center">
+						<img src="img/新风.png"/>
+					</div>
+					<div class="module-box-adjust flex-center">
+						<div class="module-box-adjust-change flex-center">
+							<svg t="1768361448809" class="icon b_effect down" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9162" width="72" height="72"><path d="M161.1 511.2l373.6-373.6c26.4-26.4 61-39.5 95.6-39.5 34.6 0 69.2 13.2 95.6 39.5 52.7 52.7 52.7 138.5 0 191.2L400.4 654.3c-10.3 10.3-27 10.3-37.3 0-10.3-10.3-10.3-27 0-37.3l325.4-325.4c32.2-32.2 32.2-84.5 0-116.6-32.2-32.2-84.5-32.2-116.6 0L198.4 548.5M630.3 98.1" fill="#2197EF" p-id="9163"></path><path d="M371 375.9l341.2 341.2c42.5 42.5 42.5 111.4 0 153.9s-111.4 42.5-153.9 0L217 529.9" fill="#CEE8FA" p-id="9164"></path><path d="M198.4 548.5l336.3 336.3c25.5 25.5 59.5 39.6 95.6 39.6 36.1 0 70.1-14.1 95.6-39.6 52.7-52.7 52.7-138.5 0-191.2L389.6 357.3m-74.6 0l17.4 17.4 19.8 19.8 336.3 336.3c32.2 32.2 32.2 84.5 0 116.6-15.6 15.6-36.3 24.2-58.3 24.2s-42.7-8.6-58.3-24.2L235.7 511.2l-20.5-20.5-16.7-16.7" fill="#2197EF" p-id="9165"></path></svg>
+							<span control="5558018">低速</span>
+							<svg t="1768361427880" class="icon b_effect up" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8174" width="72" height="72"><path d="M836.8 551.2L462 176.4c-32.3-32.3-84.8-32.3-117 0-32.3 32.3-32.3 84.8 0 117L671.5 620c10.3 10.3 10.3 27.1 0 37.4-10.3 10.3-27.1 10.3-37.4 0L307.6 330.8c-52.9-52.9-52.9-139 0-191.8 26.4-26.4 61.2-39.7 95.9-39.7s69.5 13.2 95.9 39.7l374.8 374.8M403.5 99.3" fill="#2197EF" p-id="8175"></path><path d="M818.1 532.5L475.8 874.9c-42.6 42.6-111.8 42.6-154.4 0-42.7-42.6-42.7-111.8 0-154.4l342.4-342.4" fill="#CEE8FA" p-id="8176"></path><path d="M645 359.4L307.6 696.8c-52.9 52.9-52.9 139 0 191.8 25.6 25.6 59.7 39.7 95.9 39.7s70.3-14.1 95.9-39.7l337.4-337.4m0-74.8L820 493.2l-20.6 20.6L462 851.2c-15.6 15.6-36.4 24.2-58.5 24.2s-42.9-8.6-58.5-24.2c-32.3-32.3-32.3-84.8 0-117l337.4-337.4 19.9-19.9 17.5-17.5" fill="#2197EF" p-id="8177"></path></svg>
+						</div>
+						<div class="module-box-adjust-switch">
+							<img src="img/Switch-off.png"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- <div class="module-box module-box-end">
+				<div class="module-control">
+					<div class="module-box-title">区域窗帘</div>
+					<div class="module-box-icon flex-center">
+						<img src="img/窗帘3x.png"/>
+					</div>
+					<div style="height: 16px;"></div>
+					<div class="module-box-adjust flex-center">
+						<svg t="1768361448809" class="icon b_effect curtain_icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9162" width="72" height="72"><path d="M161.1 511.2l373.6-373.6c26.4-26.4 61-39.5 95.6-39.5 34.6 0 69.2 13.2 95.6 39.5 52.7 52.7 52.7 138.5 0 191.2L400.4 654.3c-10.3 10.3-27 10.3-37.3 0-10.3-10.3-10.3-27 0-37.3l325.4-325.4c32.2-32.2 32.2-84.5 0-116.6-32.2-32.2-84.5-32.2-116.6 0L198.4 548.5M630.3 98.1" fill="#2197EF" p-id="9163"></path><path d="M371 375.9l341.2 341.2c42.5 42.5 42.5 111.4 0 153.9s-111.4 42.5-153.9 0L217 529.9" fill="#CEE8FA" p-id="9164"></path><path d="M198.4 548.5l336.3 336.3c25.5 25.5 59.5 39.6 95.6 39.6 36.1 0 70.1-14.1 95.6-39.6 52.7-52.7 52.7-138.5 0-191.2L389.6 357.3m-74.6 0l17.4 17.4 19.8 19.8 336.3 336.3c32.2 32.2 32.2 84.5 0 116.6-15.6 15.6-36.3 24.2-58.3 24.2s-42.7-8.6-58.3-24.2L235.7 511.2l-20.5-20.5-16.7-16.7" fill="#2197EF" p-id="9165"></path></svg>
+						<svg t="1768361520160" class="icon b_effect curtain_icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12674" width="72" height="72"><path d="M829 863.33H183.67c-42.46 0-77-34.54-77-77V141c0-42.46 34.54-77 77-77H829c42.46 0 77 34.54 77 77v645.33c0 42.46-34.54 77-77 77zM183.67 106c-19.3 0-35 15.7-35 35v645.33c0 19.3 15.7 35 35 35H829c19.3 0 35-15.7 35-35V141c0-19.3-15.7-35-35-35H183.67z" fill="#2197EF" p-id="12675"></path><path d="M422.33 663.67h-100c-8.84 0-16-7.16-16-16v-368c0-8.84 7.16-16 16-16h100c8.84 0 16 7.16 16 16v368c0 8.83-7.16 16-16 16zM690.33 663.67h-100c-8.84 0-16-7.16-16-16v-368c0-8.84 7.16-16 16-16h100c8.84 0 16 7.16 16 16v368c0 8.83-7.16 16-16 16z" fill="#CEE8FA" p-id="12676"></path></svg>
+						<svg t="1768361427880" class="icon b_effect curtain_icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8174" width="72" height="72"><path d="M836.8 551.2L462 176.4c-32.3-32.3-84.8-32.3-117 0-32.3 32.3-32.3 84.8 0 117L671.5 620c10.3 10.3 10.3 27.1 0 37.4-10.3 10.3-27.1 10.3-37.4 0L307.6 330.8c-52.9-52.9-52.9-139 0-191.8 26.4-26.4 61.2-39.7 95.9-39.7s69.5 13.2 95.9 39.7l374.8 374.8M403.5 99.3" fill="#2197EF" p-id="8175"></path><path d="M818.1 532.5L475.8 874.9c-42.6 42.6-111.8 42.6-154.4 0-42.7-42.6-42.7-111.8 0-154.4l342.4-342.4" fill="#CEE8FA" p-id="8176"></path><path d="M645 359.4L307.6 696.8c-52.9 52.9-52.9 139 0 191.8 25.6 25.6 59.7 39.7 95.9 39.7s70.3-14.1 95.9-39.7l337.4-337.4m0-74.8L820 493.2l-20.6 20.6L462 851.2c-15.6 15.6-36.4 24.2-58.5 24.2s-42.9-8.6-58.5-24.2c-32.3-32.3-32.3-84.8 0-117l337.4-337.4 19.9-19.9 17.5-17.5" fill="#2197EF" p-id="8177"></path></svg>
+					</div>
+				</div>
+			</div> -->
+			<div class="pages"></div>
+		</div>
+		
+		<!-- 灯光详细 -->
+		<div class="middle light">
+			<div class="pages"></div>
+		</div>
+		<!-- 空调 -->
+		<div class="middle hvac">
+			<div class="pages"></div>
+		</div>
+		<div class="middle wind">
+			<div class="module-box">
+				<div control="5550018" class="module-control" self-lock>
+					<div class="module-box-title">区域新风</div>
+					<div class="module-box-icon flex-center">
+						<img src="img/新风.png"/>
+					</div>
+					<div class="module-box-adjust flex-center">
+						<div class="module-box-adjust-change flex-center">
+							<svg t="1768361448809" class="icon b_effect down" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9162" width="72" height="72"><path d="M161.1 511.2l373.6-373.6c26.4-26.4 61-39.5 95.6-39.5 34.6 0 69.2 13.2 95.6 39.5 52.7 52.7 52.7 138.5 0 191.2L400.4 654.3c-10.3 10.3-27 10.3-37.3 0-10.3-10.3-10.3-27 0-37.3l325.4-325.4c32.2-32.2 32.2-84.5 0-116.6-32.2-32.2-84.5-32.2-116.6 0L198.4 548.5M630.3 98.1" fill="#2197EF" p-id="9163"></path><path d="M371 375.9l341.2 341.2c42.5 42.5 42.5 111.4 0 153.9s-111.4 42.5-153.9 0L217 529.9" fill="#CEE8FA" p-id="9164"></path><path d="M198.4 548.5l336.3 336.3c25.5 25.5 59.5 39.6 95.6 39.6 36.1 0 70.1-14.1 95.6-39.6 52.7-52.7 52.7-138.5 0-191.2L389.6 357.3m-74.6 0l17.4 17.4 19.8 19.8 336.3 336.3c32.2 32.2 32.2 84.5 0 116.6-15.6 15.6-36.3 24.2-58.3 24.2s-42.7-8.6-58.3-24.2L235.7 511.2l-20.5-20.5-16.7-16.7" fill="#2197EF" p-id="9165"></path></svg>
+							<span control="5552018">低速</span>
+							<svg t="1768361427880" class="icon b_effect up" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8174" width="72" height="72"><path d="M836.8 551.2L462 176.4c-32.3-32.3-84.8-32.3-117 0-32.3 32.3-32.3 84.8 0 117L671.5 620c10.3 10.3 10.3 27.1 0 37.4-10.3 10.3-27.1 10.3-37.4 0L307.6 330.8c-52.9-52.9-52.9-139 0-191.8 26.4-26.4 61.2-39.7 95.9-39.7s69.5 13.2 95.9 39.7l374.8 374.8M403.5 99.3" fill="#2197EF" p-id="8175"></path><path d="M818.1 532.5L475.8 874.9c-42.6 42.6-111.8 42.6-154.4 0-42.7-42.6-42.7-111.8 0-154.4l342.4-342.4" fill="#CEE8FA" p-id="8176"></path><path d="M645 359.4L307.6 696.8c-52.9 52.9-52.9 139 0 191.8 25.6 25.6 59.7 39.7 95.9 39.7s70.3-14.1 95.9-39.7l337.4-337.4m0-74.8L820 493.2l-20.6 20.6L462 851.2c-15.6 15.6-36.4 24.2-58.5 24.2s-42.9-8.6-58.5-24.2c-32.3-32.3-32.3-84.8 0-117l337.4-337.4 19.9-19.9 17.5-17.5" fill="#2197EF" p-id="8177"></path></svg>
+						</div>
+						<div class="module-box-adjust-switch">
+							<img src="img/Switch-off.png"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pages"></div>
+		</div>
+		<!-- 底部 切换区 -->
+		
+	</div>
+	
+	
+</body>
+<script type="text/javascript" src="js/element.js"></script>
+<script>
+	
+	let light = $(".light").find(".pages")
+	let hvac = $(".hvac").find(".pages")
+	// 灯光
+	element.addEmn({"type":2,"name":"办公区条形灯1","box":light,"isHide":true,
+					"cw_control":"152301","cw_child":"355067",
+					"ld_control":"151301","ld_child":"255067"})
+
+	element.addEmn({"type":2,"name":"办公区条形灯2","box":light,"isHide":true,
+					"cw_control":"152302","cw_child":"355072",
+					"ld_control":"151302","ld_child":"255072"})
+					
+	element.addEmn({"type":2,"name":"办公区条形灯3","box":light,"isHide":true,
+					"cw_control":"152303","cw_child":"355073",
+					"ld_control":"151303","ld_child":"255073"})
+	
+	element.addEmn({"type":2,"name":"办公区条形灯4","box":light,"isHide":true,
+					"cw_control":"152304","cw_child":"355074",
+					"ld_control":"151304","ld_child":"255074"})
+					
+	element.addEmn({"type":2,"name":"办公区条形灯5","box":light,"isHide":true,
+					"cw_control":"152305","cw_child":"355083",
+					"ld_control":"151305","ld_child":"255083"})
+	// 前
+	element.addEmn({"type":2,"name":"办公区条形灯6","box":light,"isHide":true,
+					"cw_control":"152306","cw_child":"355084",
+					"ld_control":"151306","ld_child":"255084"})
+	
+	element.addEmn({"type":2,"name":"办公区条形灯7","box":light,"isHide":true,
+					"cw_control":"152307","cw_child":"355085",
+					"ld_control":"151307","ld_child":"255085"})
+					
+	element.addEmn({"type":2,"name":"办公区条形灯8","box":light,"isHide":true,
+					"cw_control":"152308","cw_child":"355086",
+					"ld_control":"151308","ld_child":"255086"})
+					
+	element.addEmn({"type":2,"name":"办公区条形灯9","box":light,"isHide":true,
+					"cw_control":"152309","cw_child":"355087",
+					"ld_control":"151309","ld_child":"255087"})
+	// //其他
+	// element.addEmn({"type":2,"name":"茶水间","box":light,"isHide":false,
+	// 				"cw_control":"152310","cw_child":"355094",
+	// 				"ld_control":"151310","ld_child":"255094"})
+	// //其他
+	// element.addEmn({"type":2,"name":"总经理","box":light,"isHide":false,
+	// 				"cw_control":"152311","cw_child":"355091",
+	// 				"ld_control":"151311","ld_child":"255091"})
+					
+	element.addEmn({"type":2,"name":"董事长助理条形灯","box":light,"isHide":true,
+					"cw_control":"152312","cw_child":"355096",
+					"ld_control":"151312","ld_child":"255096"})
+					
+	// element.addEmn({"type":2,"name":"左走廊","box":light,"isHide":false,
+	// 				"cw_control":"152313","cw_child":"355095,355098,355100,355088,355077,355065,355066,355023,355022",
+	// 				"ld_control":"151313","ld_child":"255095,255098,255100,255088,255077,255065,255066,255023,255022"})
+	// 				// 95-98-100-88-77-65-66-23-22
+	// element.addEmn({"type":2,"name":"右走廊","box":light,"isHide":false,
+	// 				"cw_control":"152314","cw_child":"355089,355071,355064,355009,355005,355012,355003,355002",
+	// 				"ld_control":"151314","ld_child":"255089,255071,255064,255009,255005,255012,255003,255002"})
+					// 89-71-64-9-5-12-3-2
+					
+	//空调
+	element.addHvac({"type":2,"name":"办公区空调1","box":hvac,"control":"4550046","data":"4553046"})
+	element.addHvac({"type":2,"name":"办公区空调2","box":hvac,"control":"4550047","data":"4553047"})
+	element.addHvac({"type":2,"name":"办公区空调3","box":hvac,"control":"4550048","data":"4553048"})
+	element.addHvac({"type":2,"name":"办公区空调4","box":hvac,"control":"4550049","data":"4553049"})
+	element.addHvac({"type":2,"name":"办公区空调5","box":hvac,"control":"4550050","data":"4553050"})
+	element.addHvac({"type":2,"name":"办公区空调6","box":hvac,"control":"4550051","data":"4553051"})
+	element.addHvac({"type":2,"name":"办公区空调7","box":hvac,"control":"4550052","data":"4553052"})
+	element.addHvac({"type":2,"name":"办公区空调8","box":hvac,"control":"4550053","data":"4553053"})
+	element.addHvac({"type":2,"name":"办公区空调9","box":hvac,"control":"4550054","data":"4553054"})
+
+
+	element.addHvac({"type":2,"name":"董事长助理","box":hvac,"control":"4550055","data":"4553055"})
+	element.addHvac({"type":2,"name":"女厕空调","box":hvac,"control":"4550017","data":"4553017"})
+	element.addHvac({"type":2,"name":"男厕空调","box":hvac,"control":"4550019","data":"4553019"})
+	
+	
+</script>
+<script type="text/javascript" src="js/index_10.js"></script>
+</html>

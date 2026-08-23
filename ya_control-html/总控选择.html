@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>5楼区域1</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/date.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/alert.css">
+    <script type="text/javascript" src="js/alert.js"></script>
+    <script type="text/javascript" src="js/RangeSlider.js"></script>
+	<link href="css/index_1280x800.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/slider_10.css" type="text/css"/>
+    <script type="text/javascript" charset="utf-8">
+        document.write('<script type="text/javascript" src="js/utils.js?t=' + new Date().getTime() + '"><\/script>');
+    </script>
+	<style>
+		html{
+			background-color: #364153;
+		}
+		
+		body{
+			background: url("img/移动总控屏-切换分区.png") no-repeat;
+			background-size: 100% 100%;
+		}
+	
+		
+		.floors-box{
+			width: 20%;
+			height: 100%;
+		}
+		
+		.arrows{
+			width: 8%;
+			height: 100%;
+		}
+		
+		.arrows img{
+			width: 80%;
+		}
+		
+		.pages-box{
+			width: 72%;
+			height: 100%;
+		}
+		
+		.floor-but{
+			background: url("img/Frame 17706.png") no-repeat;
+			background-size: 100% 100%;
+			width: 80%;
+			height: 10%;
+			left: 10%;
+			margin-top: 18%;
+			margin-bottom: 18%;
+			font-size: 1.75vw;
+		}
+		
+		.floor-but:active{
+			background: url("img/Frame 17707.png") no-repeat;
+			background-size: 100% 100%;
+		}
+		
+		.floor-but-active{
+			background: url("img/Frame 17707.png") no-repeat;
+			background-size: 100% 100%;
+		}
+		
+		.back-box{
+			width: 100%;
+			height: 10%;
+			margin-top: 2%;
+		}
+		
+		.back{
+			width: 12%;
+			height: 70%;
+			background: url("img/Frame 17706.png") no-repeat;
+			background-size: 100% 100%;
+			font-size: 1.25vw;
+		}
+		
+		.back:active{
+			background: url("img/Frame 17707.png") no-repeat;
+			background-size: 100% 100%;
+		}
+		
+		.pageboxs{
+			width: 98%;
+			height: 77%;
+			margin-top: 3%;
+			overflow-y: scroll;
+			
+		}
+		
+		.pagebox{
+			background: url("img/Frame 17706.png") no-repeat;
+			background-size: 100% 100%;
+			width: calc(28% - 30px);
+			height: 21%;
+			margin: 2.5%;
+			font-size: 1.75vw;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			float: left;
+			padding-left: 15px;
+			padding-right: 15px;
+			text-align: center;
+		}
+		
+		.pagebox:active{
+			background: url("img/Frame 17707.png") no-repeat;
+			background-size: 100% 100%;
+		}
+		
+		.text{
+			margin-right: 50%;
+			font-size: 2vw;
+		}
+	</style>
+</head>
+<body>
+	<div class="content flex-center">		
+		<div class="floors-box">
+			<div class="floor-but flex-center">-1楼</div>
+			<div class="floor-but flex-center" id="def">1楼</div>
+			<div class="floor-but flex-center">2楼</div>
+			<div class="floor-but flex-center">3楼</div>
+			<div class="floor-but flex-center">4楼</div>
+			<div class="floor-but flex-center">5楼</div>
+		</div>
+		<div class="arrows flex-center">
+			<img src="img/right.png"/>
+		</div>
+		<div class="pages-box">
+			<div class="back-box flex-end-center">
+				<div class="text">页面选择</div>
+				<!-- <div class="back flex-center">返回</div> -->
+			</div>
+			
+			<div class="pageboxs">
+				
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	let html = {
+		"-1楼":["食堂","食堂包间"],
+		"1楼":["大厅","厂区","小会议室","中会议室01","中会议室02","质量部","共享办公区","订单中心"],
+		"2楼":["冷链办公室","冷链会议室","厂区"],
+		"3楼":["厂区"],
+		"4楼":["新业务管理区域","医修、数字流程化区域","区域1","区域2","小会议室01","小会议室02","小会议室03","小会议室04","小会议室05","中会议室01","中会议室02","中会议室03","大会议室","信系办公区"],
+		"5楼":["投资、行政、财务区域","人才、传讯、分子、市场、采购区域","IT区域","四川公司、销售支持区域","小会议室01","小会议室02","小会议室03","中会议室01","中会议室02","大会议室01","大会议室02","审计办公室","财务办公室","茶室","总经理","董事长"],
+	}
+
+	var jmpurl = utils.GetQueryString("jmpurl");
+	
+	$("html").on("click",".floor-but",function(){
+		$(".floor-but-active").removeClass("floor-but-active")
+		$(this).addClass("floor-but-active")
+		let floor = $(this).text()
+		let arr = html[floor]
+		$(".pageboxs").html("")
+		for (let i = 0; i < arr.length; i++) {
+			$(".pageboxs").append('<div class="pagebox">'+arr[i]+'</div>')
+		}
+	})
+	
+	$("html").on("click",".pagebox",function(){
+		let name = $(this).text()
+		let floor = $(".floor-but-active").text()
+		var url = window.location.pathname;
+		var filename = url.substring(url.lastIndexOf('/') + 1);
+		location.href = floor + name + ".html?sum=" + floor
+	})
+	
+	$("html").on("click",".back",function(){
+		if(!utils.isnull(jmpurl)){
+			location.href = jmpurl
+		}
+	})
+	
+	var oldf = decodeURIComponent(window.location.href);
+	if(!utils.isnull(oldf)){
+		let sp = oldf.split("sum=")
+		if(sp.length == 2){
+			$.each($(".floor-but"),function(idx,itm){
+				if($(itm).text() == sp[1]){
+					$(itm).click()
+				}
+			})
+		}else{
+			$("#def").click();
+		}
+	}else{
+		$("#def").click();
+	}
+	
+	init();
+	function init() {
+	    try {
+	        window.android.sync("");
+	    } catch (e) {}
+	}
+
+</script>
+</html>

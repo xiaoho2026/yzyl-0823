@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>5楼区域1</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/date.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/alert.css">
+    <script type="text/javascript" src="js/alert.js"></script>
+    <script type="text/javascript" src="js/RangeSlider.js"></script>
+    <link href="css/index_4.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/slider_4.css" type="text/css"/>
+	<script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        document.write('<script type="text/javascript" src="js/utils.js?t=' + new Date().getTime() + '"><\/script>');
+    </script>
+	
+    <style>	
+		/* 互锁模式 */
+		.inter-lock-active-mode1 {
+			background-color: rgba(191,229,255, 0.25);
+		}
+		
+    </style>
+</head>
+<body>
+	<div class="content">		
+		<!-- 顶部 时间 logo -->
+		<div class="top flex-center">
+			<div class="top-left flex-center">
+				<div class="date-time">
+					<div class="time">09:00</div>
+					<div class="date">2024/07/23 周二</div>
+				</div>
+				<img src="img/Rectangle 137.png"/>
+				<div class="air hide">
+					<div class="air-box flex-center">
+						<img src="img/湿度@3x.png"/>
+						<div class="air-box-text">
+							<div class="air-box-text-title">室内湿度</div>
+							<div class="air-box-text-data">45%</div>
+						</div>
+					</div>
+					<div class="air-box flex-center">
+						<img src="img/湿度@3x.png"/>
+						<div class="air-box-text">
+							<div class="air-box-text-title">室内湿度</div>
+							<div class="air-box-text-data">45%</div>
+						</div>
+					</div>
+					<div class="air-box flex-center">
+						<img src="img/湿度@3x.png"/>
+						<div class="air-box-text">
+							<div class="air-box-text-title">室内湿度</div>
+							<div class="air-box-text-data">45%</div>
+						</div>
+					</div>
+					
+					<div class="air-box-more">
+						<img src="img/Group 1912059994.png"/>
+					</div>
+				</div>
+				<div class="logo">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="back"></div>
+			</div>
+
+		</div>
+		<!-- 中间 控制区 -->
+		<div class="middle scene">
+			<div class="module-box flex-center">
+				<div class="module-mode">
+					<!-- <div class="mode flex-center" control="951103" childon="111802" inter-lock="mode1">
+						<img src="img/日常.png"/>
+						<span>会议模式</span>
+					</div>
+					<div class="mode flex-center" control="951104" childoff="111802,4510023" inter-lock="mode1">
+						<img src="img/meet.png"/>
+						<span>离开模式</span>
+					</div>
+					<div class="dashed"></div> -->
+					<div class="mode flex-center" pop="call-change-pop">
+						<img src="img/服务.png"/>
+						<span>服务呼叫</span>
+					</div>
+					<div class="mode flex-center" pop="meeting-change-pop">
+						<img src="img/会议.png"/>
+						<span>会议修改</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="module-box">
+				<div isAll control="111802" child="111010,251023" class="module-control" self-lock>
+					<div class="module-box-title">区域灯光
+						<span class="flex-center" href="light">更多</span>
+					</div>
+					<div class="module-box-icon flex-center">
+						<img src="img/灯.png"/>
+					</div>
+					<div class="module-box-adjust flex-center">
+						<div class="module-box-adjust-change flex-center">
+							<svg t="1768361448809" class="icon b_effect down" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9162" width="72" height="72"><path d="M161.1 511.2l373.6-373.6c26.4-26.4 61-39.5 95.6-39.5 34.6 0 69.2 13.2 95.6 39.5 52.7 52.7 52.7 138.5 0 191.2L400.4 654.3c-10.3 10.3-27 10.3-37.3 0-10.3-10.3-10.3-27 0-37.3l325.4-325.4c32.2-32.2 32.2-84.5 0-116.6-32.2-32.2-84.5-32.2-116.6 0L198.4 548.5M630.3 98.1" fill="#2197EF" p-id="9163"></path><path d="M371 375.9l341.2 341.2c42.5 42.5 42.5 111.4 0 153.9s-111.4 42.5-153.9 0L217 529.9" fill="#CEE8FA" p-id="9164"></path><path d="M198.4 548.5l336.3 336.3c25.5 25.5 59.5 39.6 95.6 39.6 36.1 0 70.1-14.1 95.6-39.6 52.7-52.7 52.7-138.5 0-191.2L389.6 357.3m-74.6 0l17.4 17.4 19.8 19.8 336.3 336.3c32.2 32.2 32.2 84.5 0 116.6-15.6 15.6-36.3 24.2-58.3 24.2s-42.7-8.6-58.3-24.2L235.7 511.2l-20.5-20.5-16.7-16.7" fill="#2197EF" p-id="9165"></path></svg>
+							<span>70%</span>
+							<svg t="1768361427880" class="icon b_effect up" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8174" width="72" height="72"><path d="M836.8 551.2L462 176.4c-32.3-32.3-84.8-32.3-117 0-32.3 32.3-32.3 84.8 0 117L671.5 620c10.3 10.3 10.3 27.1 0 37.4-10.3 10.3-27.1 10.3-37.4 0L307.6 330.8c-52.9-52.9-52.9-139 0-191.8 26.4-26.4 61.2-39.7 95.9-39.7s69.5 13.2 95.9 39.7l374.8 374.8M403.5 99.3" fill="#2197EF" p-id="8175"></path><path d="M818.1 532.5L475.8 874.9c-42.6 42.6-111.8 42.6-154.4 0-42.7-42.6-42.7-111.8 0-154.4l342.4-342.4" fill="#CEE8FA" p-id="8176"></path><path d="M645 359.4L307.6 696.8c-52.9 52.9-52.9 139 0 191.8 25.6 25.6 59.7 39.7 95.9 39.7s70.3-14.1 95.9-39.7l337.4-337.4m0-74.8L820 493.2l-20.6 20.6L462 851.2c-15.6 15.6-36.4 24.2-58.5 24.2s-42.9-8.6-58.5-24.2c-32.3-32.3-32.3-84.8 0-117l337.4-337.4 19.9-19.9 17.5-17.5" fill="#2197EF" p-id="8177"></path></svg>
+						</div>
+						<div class="module-box-adjust-switch">
+							<img src="img/Switch-off.png"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 集合 > 6开关 7模式 8风速 9温度 -->
+			
+			<div class="pages"></div>
+		</div>
+		
+		<!-- 详细 -->
+		<div class="middle light">
+			
+			<div class="pages"></div>
+		</div>
+		<div class="middle hvac">
+			
+			<div class="pages"></div>
+		</div>
+		
+	</div>
+	
+</body>
+
+<script type="text/javascript" src="js/element.js"></script>
+<script>
+	element.addEmn({"type":2,"name":"灯光","box":$(".light").find(".pages"),"isHide":true,
+					"cw_control":"112010","cw_child":"351023",
+					"ld_control":"111010","ld_child":"251023"})
+					
+	element.addHvac({"type":2,"name":"空调","box":$(".scene").find(".pages"),"control":"4510023","data":"4513023"})
+
+</script>
+<script type="text/javascript" src="js/index_4.js"></script>
+</html>

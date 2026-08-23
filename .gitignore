@@ -1,0 +1,19 @@
+# 跨设备协同（macOS + Windows 10）忽略规则
+# 说明：ya_control/ 内已有 Android 标准 .gitignore（忽略 build/.gradle/local.properties/.idea 等）
+#       本文件补仓库级通用忽略。
+
+# macOS 垃圾文件
+.DS_Store
+.AppleDouble
+Thumbs.db
+
+# CodeBuddy 本地产物（含本机路径，不跨设备同步）
+.codebuddy/
+
+# 各 OS 编辑器缓存
+*.swp
+*~
+
+# 日志/临时
+*.log
+tmp/
